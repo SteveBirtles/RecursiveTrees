@@ -39,13 +39,13 @@ public class Main
 
     private static void preOrderTraverse(BinaryNode node) {
         System.out.println(node.getValue());
-        if (node.getLeftChild() != null) inOrderTraverse(node.getLeftChild());
-        if (node.getRightChild() != null) inOrderTraverse(node.getRightChild());
+        if (node.getLeftChild() != null) preOrderTraverse(node.getLeftChild());
+        if (node.getRightChild() != null) preOrderTraverse(node.getRightChild());
     }
 
     private static void postOrderTraverse(BinaryNode node) {
-        if (node.getLeftChild() != null) inOrderTraverse(node.getLeftChild());
-        if (node.getRightChild() != null) inOrderTraverse(node.getRightChild());
+        if (node.getLeftChild() != null) postOrderTraverse(node.getLeftChild());
+        if (node.getRightChild() != null) postOrderTraverse(node.getRightChild());
         System.out.println(node.getValue());
     }
 
